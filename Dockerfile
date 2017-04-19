@@ -1,6 +1,6 @@
 FROM ubuntu:16.04
 
-MAINTAINER Marcelo França <marcelo.franca.neves@gmail.com>
+MAINTAINER Marcelo França <marcelofrancaneves@hotmail.com>
 
 ENV DEBIAN_FRONTEND noninteractive
 
@@ -20,7 +20,7 @@ RUN echo "postgres ALL=(ALL) NOPASSWD:/usr/bin/supervisord" >> /etc/sudoers
 RUN mkdir -p /var/log/supervisor
 USER postgres
 
-RUN /etc/init.d/postgresql start && psql --command "CREATE USER citsmart WITH SUPERUSER PASSWORD '123Mudar';" && createdb -O citsmart citsmartdb && createdb -O citsmart citgrp
+RUN /etc/init.d/postgresql start && psql --command "CREATE USER adminapp WITH SUPERUSER PASSWORD '123Mudar';" && createdb -O adminapp app1 && createdb -O adminapp app2
 
 ENV TERM xterm
 
