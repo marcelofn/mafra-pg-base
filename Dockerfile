@@ -20,7 +20,7 @@ RUN echo "postgres ALL=(ALL) NOPASSWD:/usr/bin/supervisord" >> /etc/sudoers
 RUN mkdir -p /var/log/supervisor
 USER postgres
 
-RUN /etc/init.d/postgresql start && psql --command "CREATE USER citsmart WITH SUPERUSER PASSWORD '123Mudar';" && createdb -O citsmart citsmartdb && createdb -O citsmart citgp
+RUN /etc/init.d/postgresql start && psql --command "CREATE USER citsmart WITH SUPERUSER PASSWORD '123Mudar';" && createdb -O citsmart citsmartdb && createdb -O citsmart citgrp
 
 ENV TERM xterm
 
