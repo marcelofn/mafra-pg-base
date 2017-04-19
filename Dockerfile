@@ -1,6 +1,6 @@
 FROM ubuntu:16.04
 
-MAINTAINER Marcelo França marcelo.franca@citsmart.com
+MAINTAINER Marcelo França <marcelo.franca.neves@gmail.com>
 
 ENV DEBIAN_FRONTEND noninteractive
 
